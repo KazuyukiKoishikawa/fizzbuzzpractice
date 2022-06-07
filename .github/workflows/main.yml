@@ -36,4 +36,4 @@ jobs:
     - uses: actions/upload-artifact@v1.0.0
       with:
           name: artifacts
-          path: src\FizBuzz\bin\Release\FizzBuzz.dll
+          path: FizBuzz\bin\Release\FizzBuzz.dll
