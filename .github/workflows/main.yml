@@ -38,8 +38,3 @@ jobs:
           name: artifacts
           path: FizzBuzz\bin\Release\FizzBuzz.dll
 
-    - name: Publish Test Results
-      uses: EnricoMi/publish-unit-test-result-action/composite@v1
-      if: always()
-      with:
-        files: "TestResults/**/*.trx"
