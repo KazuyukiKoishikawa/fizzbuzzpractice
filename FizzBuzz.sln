@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz", "FizzBuzz\FizzBuzz.csproj", "{3C88D58B-0B62-45BA-838D-D7E6800F8D54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzTests", "FizzBuzzTests\FizzBuzzTests.csproj", "{E007CBD3-5B7E-4099-9B6A-727ABB9382AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F042CD4-A77C-4CB3-ABFD-ACD1EA5C1B48}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{B06B48AD-E27C-44A3-98D9-BD4C5BB1EF7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{B9C7D389-ACB2-432E-8B15-07D5D8656726}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main.yml = .github\workflows\main.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C88D58B-0B62-45BA-838D-D7E6800F8D54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C88D58B-0B62-45BA-838D-D7E6800F8D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C88D58B-0B62-45BA-838D-D7E6800F8D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C88D58B-0B62-45BA-838D-D7E6800F8D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E007CBD3-5B7E-4099-9B6A-727ABB9382AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E007CBD3-5B7E-4099-9B6A-727ABB9382AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E007CBD3-5B7E-4099-9B6A-727ABB9382AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E007CBD3-5B7E-4099-9B6A-727ABB9382AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B9C7D389-ACB2-432E-8B15-07D5D8656726} = {B06B48AD-E27C-44A3-98D9-BD4C5BB1EF7D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6783D125-CB68-44E0-9E56-82B9AB200A54}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,37 @@
+name: CI example
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+
+    runs-on: windows-2019
+
+    steps:
+    - name: Check out
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+
+    - name: setup
+      uses: warrenbuckley/Setup-Nuget@v1
+      uses: warrenbuckley/Setup-MSBuild@v1
+      uses: darenm/Setup-VSTest@v1
+
+    - name: MSBuild
+      run: |
+        nuget restore FizzBuzz.sln
+        MSBuild.exe FizzBuzz.sln -p:Configuration=Release
+      timeout-minutes: 5
+
+    - name: VSTest
+      run: vstest.console.exe .\FizzBuzzTests\bin\Release\FizzBuzzTests.dll
+
+    - uses: actions/upload-artifact@v1.0.0
+      with:
+          name: artifacts
+          path: src\FizBuzz\Release\FizzBuzz.dll
