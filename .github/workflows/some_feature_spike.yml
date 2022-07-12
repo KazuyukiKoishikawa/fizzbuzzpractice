@@ -37,6 +37,24 @@ jobs:
     - name: VSTest
       run: vstest.console.exe /Logger:trx .\FizzBuzzTests\bin\Release\FizzBuzzTests.dll
 
+    - name: Upload Unit Test Resuts
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: VSTest Results
+        path: TestResults/*.trx
+
+    - name: Download Test Artifacts
+      if: success() || failure()
+      uses: actions/download-artifact@v2
+      with:
+        path: artifacts
+
+    - name: Publish Unit Test Results
+      uses: EnrioMi/publish-unit-test-result-action@v1
+      with:
+        files: artifacts/**/*.trx
+
     - uses: actions/upload-artifact@v1.0.0
       with:
           name: artifacts
